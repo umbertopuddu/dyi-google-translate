@@ -78,7 +78,6 @@ Or use greedy decoding:
 python src/run.py --model 'best_ckpt.tar' --input 'come stai?' --decode 'greedy'
 ```
 
-
 ## 🔄 Example: Beam vs Greedy (Real Outputs)
 
 | Input                          | Greedy Output (Truncated)                                    | Beam Output (Truncated)                             |
@@ -125,9 +124,7 @@ python src/run.py --model 'best_ckpt.tar' --input 'come stai?' --decode 'greedy'
 
 ---
 
-## 🙌 Contributors Welcome
-
-> 🤝 **Looking for contributors**  
+## 🤝 **Looking for contributors**  
 > If you're into building affordable AI, experimenting with language models, or just enjoy hacking with transformers — you're welcome to help extend this. More languages, more robustness, more research — let’s do it together. Contact me on [LinkedIn](https://www.linkedin.com/in/upuddu/).
 
 ---
