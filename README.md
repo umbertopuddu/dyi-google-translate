@@ -1,8 +1,8 @@
 # 🌍 Google-like Translate Transformer — *Proof of Concept*
 
 > A Transformer-based neural machine translation system for Italian → English.  
-> Trained on Europarl v7 (Parliament Proceedings) with PyTorch, SentencePiece, and a custom-built architecture.  
-> Fine-tuned overnight on **NVIDIA H100 SXM** for **$20 on [Vast.ai](https://vast.ai/)** — *powerful, cheap, efficient*.
+> Trained on Europarl v7 (Parliament Proceedings) with PyTorch, SentencePiece, and a custom-built transformer architecture.  
+> Fine-tuned overnight on **NVIDIA H100 SXM** for **$20 on [Vast.ai](https://vast.ai/).
 
 ---
 
@@ -69,13 +69,13 @@ pip install -r requirements.txt
 From the project root:
 
 ```bash
-python3.10 src/run.py --model 'best_ckpt.tar' --input 'come stai?' --decode 'beam'
+python src/run.py --model 'best_ckpt.tar' --input 'come stai?' --decode 'beam'
 ```
 
 Or use greedy decoding:
 
 ```bash
-python3.10 src/run.py --model 'best_ckpt.tar' --input 'come stai?' --decode 'greedy'
+python src/run.py --model 'best_ckpt.tar' --input 'come stai?' --decode 'greedy'
 ```
 
 ### 🧾 Output
