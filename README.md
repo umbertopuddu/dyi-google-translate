@@ -2,7 +2,7 @@
 
 > A Transformer-based neural machine translation system for Italian → English.  
 > Trained on Europarl v7 (Parliament Proceedings) with PyTorch, SentencePiece, and a custom-built transformer architecture.  
-> Fine-tuned overnight on **NVIDIA H100 SXM** for **$20 on [Vast.ai](https://vast.ai/).
+> Fine-tuned overnight on **NVIDIA H100 SXM** for **$20** on [Vast.ai](https://vast.ai/).
 
 ---
 
@@ -47,10 +47,10 @@
 - 🔗 Dataset: [European Parliament Proceedings Parallel Corpus](https://www.statmt.org/europarl/)
 - 🗃 Size: ~2.1 million aligned sentence pairs
 - 🖥️ Hardware: **NVIDIA H100 SXM (Vast.ai)**
-- ⏱️ Duration: ~10 epochs overnight
+- ⏱️ Duration: 10 epochs (overnight)
 - 💰 Budget: ~\$20
 
-> Because the dataset is formal, the model performs best when translating well-structured, formal Italian.
+> Because the dataset uses formal jargon, the model performs best when translating well-structured, formal Italian.
 
 ---
 
@@ -78,17 +78,6 @@ Or use greedy decoding:
 python src/run.py --model 'best_ckpt.tar' --input 'come stai?' --decode 'greedy'
 ```
 
-### 🧾 Output
-
-```
-Input: come stai?
-Result: How are you?'??' How are you?
-Inference finished! || Total inference time: 0mins 3secs
-```
-
-> 🚨 Note: Output may include repetitions or struggle with proper punctuation — common in smaller Transformer models. That said, **semantic understanding is often surprisingly accurate.**
-
----
 
 ## 🔄 Example: Beam vs Greedy (Real Outputs)
 
@@ -98,6 +87,9 @@ Inference finished! || Total inference time: 0mins 3secs
 | `sto cercando lavoro`         | I am looking for work job job job job searching job...        | I am looking for work job job job job searching...   |
 | `mi chiamo Umberto`           | I am called Umberttobertoberto ometta ometta ometta...        | I am called Umberto Umbertoto Umbertoto be...        |
 | `come sta Signor Rossi?`      | How is Mr Rossi?? what is Mr Rosss????? what is Mr...         | How is Mr Rossi?? what is Mr Rossite?                |
+
+
+> 🚨 Note: Output may include repetitions or struggle with proper punctuation — common in smaller Transformer models. That said, **semantic understanding is often surprisingly accurate.**
 
 ---
 
@@ -125,7 +117,7 @@ Inference finished! || Total inference time: 0mins 3secs
 
 ## 🚀 Future Improvements
 
-- Train on full 300M-line dataset
+- Train on full bigger dataset (i.e. [Tatoeba-Challenge](https://github.com/Helsinki-NLP/Tatoeba-Challenge/tree/master/data))
 - Fine-tune with general-domain text (e.g. Wikipedia)
 - Add punctuation/stop-token rewards (to prevent hallucinations)
 - Compress model for faster inference
@@ -136,7 +128,7 @@ Inference finished! || Total inference time: 0mins 3secs
 ## 🙌 Contributors Welcome
 
 > 🤝 **Looking for contributors**  
-> If you're into building affordable AI, experimenting with language models, or just enjoy hacking with transformers — you're welcome to help extend this. More languages, more robustness, more research — let’s do it together.
+> If you're into building affordable AI, experimenting with language models, or just enjoy hacking with transformers — you're welcome to help extend this. More languages, more robustness, more research — let’s do it together. Contact me on [LinkedIn](https://www.linkedin.com/in/upuddu/).
 
 ---
 
